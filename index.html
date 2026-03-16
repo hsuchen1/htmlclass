@@ -44,23 +44,34 @@
         <th>113403028</th>
     </tr>
 </table>
-<p>Code example:</p>
-<pre><code>var person = {
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+    <div style="flex: 1; min-width: 250px;">
+        <p>Code example:</p>
+        <pre><code>var person = {
     firstName:"旭宸",
     lastName :"鄭",
     studentId:"113403028"
 }
 </code></pre>
-<form>
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" value="旭宸"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" value="鄭"><br>
-    <label for="ID">Student ID:</label><br>
-    <input type="text" id="ID" name="ID" value="113403028"><br><br>
-    <input type="submit" value="Submit">
-    <input type="reset">
-</form>
+        <form>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="旭宸"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="鄭"><br>
+            <label for="ID">Student ID:</label><br>
+            <input type="text" id="ID" name="ID" value="113403028"><br><br>
+            <input type="submit" value="Submit">
+            <input type="reset">
+        </form>
+    </div>
+
+    <div style="flex: 0 0 auto;">
+        <svg width="400" height="300">
+            <rect x="50" y="50" width="150" height="150" fill="blue" stroke="black" stroke-width="4.3" />
+            <circle cx="200" cy="125" r="65" fill="yellow" stroke="red" stroke-width="5" />
+        </svg>
+    </div>
+</div>
 
 
 
