@@ -27,6 +27,67 @@
             padding: 5px; 
             text-align: left; 
         }
+
+        .content-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .code-column {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .middle-demo {
+            flex: 0 1 420px;
+            min-width: 320px;
+            padding-top: 58px;
+        }
+
+        .demo-card {
+            background-color: white;
+            padding: 24px 28px 18px;
+            box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+        }
+
+        .demo-h1 {
+            margin: 0 0 28px;
+            text-decoration: overline;
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 3px 3px 0 #f3b3be;
+        }
+
+        .demo-h2 {
+            margin: 0 0 34px;
+            border: 4px solid #d6d000;
+            box-shadow: inset 0 0 0 1px #000000;
+            padding: 6px 10px;
+            font-size: 24px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .demo-h3 {
+            margin: 0;
+            text-align: right;
+            text-decoration: underline;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .ex16-column {
+            flex: 0 1 430px;
+            min-width: 320px;
+            margin-left: 12px;
+        }
+
+        .ex16-box {
+            box-sizing: border-box;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -44,8 +105,8 @@
         <th>113403028</th>
     </tr>
 </table>
-<div style="display: flex; align-items: flex-start; gap: 20px;">
-    <div style="flex: 1; min-width: 250px;">
+<div class="content-row">
+    <div class="code-column">
         <p>Code example:</p>
         <pre><code>var person = {
     firstName:"旭宸",
@@ -65,11 +126,20 @@
         </form>
     </div>
 
-    <div style="flex: 1 0 auto;">
+    <div class="middle-demo">
+        <div class="demo-card">
+            <h4>ex18</p>
+            <h1 class="demo-h1">This is heading 1</h1>
+            <h2 class="demo-h2">This is heading 2</h2>
+            <h3 class="demo-h3">This is heading 3</h3>
+        </div>
+    </div>
+
+    <div class="ex16-column">
         <p>ex16</p>
-        <div style="color: black; background-color: lightblue; border-width: 7px; border-style: double; border-color: red; padding: 10px; margin-bottom: 10px; font-size: 24px; font-weight: bold;">Hello World</div>
-        <div style="color: black; background-color: yellow; border-width: 3px; border-style: solid; border-color: rgb(5, 140, 249); border-radius: 5px; padding: 10px; margin-bottom: 10px; font-size: 24px; font-weight: bold;">Hello World</div>
-        <div style="color: black; background-color: rgb(39, 200, 84); border-width: 6px; border-style: dotted; border-color: gray; padding: 10px; font-size: 24px; font-weight: bold;">Hello World</div>
+        <div class="ex16-box" style="color: black; background-color: lightblue; border-width: 7px; border-style: double; border-color: red; padding: 10px; margin-bottom: 10px; font-size: 24px; font-weight: bold;">Hello World</div>
+        <div class="ex16-box" style="color: black; background-color: yellow; border-width: 3px; border-style: solid; border-color: rgb(5, 140, 249); border-radius: 5px; padding: 10px; margin-bottom: 10px; font-size: 24px; font-weight: bold;">Hello World</div>
+        <div class="ex16-box" style="color: black; background-color: rgb(39, 200, 84); border-width: 6px; border-style: dotted; border-color: gray; padding: 10px; font-size: 24px; font-weight: bold;">Hello World</div>
     </div>
 </div>
 
