@@ -104,6 +104,45 @@
     </tr>
 </table>
 
+<!-- ex23 -->
+<div style="background-color: #f1f1f1; padding: 15px; border: 1px solid #ccc; box-shadow: 0 0 10px rgba(0,0,0,0.05); margin: 30px 0;">
+    <p style="margin-top: 0; font-weight: bold;">ex23</p>
+    <div style="width: 496px; background-color: #fff; margin: 0 auto; box-shadow: 0 0 5px rgba(0,0,0,0.2);">
+        <!-- Header -->
+        <div style="height: 35px; background-color: #f6f6f6; position: relative;">
+            <span style="font-size: 13px; color: #707070; position: absolute; left: 15px; top: 9px; font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', Arial, sans-serif;">預覽</span>
+            <button id="infoBtn" onclick="toggleInfo()" style="position: absolute; right: 18px; top: 6.5px; height: 22px; border-radius: 8px; border: 1px solid #2f2f2f; background-color: #ffffff; color: #2f2f2f; font-size: 13px; font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', Arial, sans-serif; cursor: pointer; padding: 0 8px; line-height: 20px; box-sizing: border-box; outline: none;">查看資訊</button>
+        </div>
+
+        <!-- Image Area -->
+        <div style="padding: 20px 26px 26px 20px;">
+            <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=450&q=80" alt="Landscape" style="width: 450px; height: 240px; display: block; object-fit: cover;">
+        </div>
+
+        <!-- Detailed Info panel (hidden by default) -->
+        <div id="infoPanel" style="display: none; background-color: #f3f3f3; padding: 10px 20px 10px 20px; font-size: 13px; color: #707070; font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', Arial, sans-serif; border-top: 1px solid #eaeaea;">
+            <div style="margin-bottom: 6px;">修改日期: 2017/10/12</div>
+            <div style="margin-bottom: 6px;">類型: JPG</div>
+            <div style="margin-bottom: 6px;">大小: 466.97KB</div>
+            <div style="line-height: 1.4; word-break: break-all;">路徑: \\designcenter.qnap.com.tw\DesignCenter\PM - RD 講義\WEB\Static_Image2PDF\v2\sample</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleInfo() {
+        var panel = document.getElementById("infoPanel");
+        var btn = document.getElementById("infoBtn");
+        if (panel.style.display === "none") {
+            panel.style.display = "block";
+            btn.innerText = "收起資訊";
+        } else {
+            panel.style.display = "none";
+            btn.innerText = "查看資訊";
+        }
+    }
+</script>
+
 <div style="display: flex; gap: 20px; align-items: flex-start; margin: 30px 0;">
     <!-- 左半邊：ex21 -->
     <div style="flex: 1; background-color: #f1f1f1; padding: 15px; border: 1px solid #ccc; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
