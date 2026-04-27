@@ -88,21 +88,86 @@
             box-sizing: border-box;
             width: 100%;
         }
+
+        /* ex27 MQ Layout */
+        .ex27-container {
+            background-color: #4da6ff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .ex27-wrapper {
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .ex27-row {
+            display: flex;
+            gap: 10px;
+        }
+        .ex27-box {
+            border-radius: 4px;
+            min-height: 80px;
+        }
+        .ex27-green {
+            background-color: #aed54c;
+            width: 100%;
+            min-height: 120px;
+        }
+        .ex27-cyan-col {
+            background-color: #00bcd4;
+            flex: 1;
+        }
+        .ex27-gray-col {
+            background-color: #e8eaed;
+            flex: 1;
+            min-height: 50px;
+        }
+
+        @media (max-width: 480px) {
+            .ex27-cyan-row {
+                flex-direction: column;
+            }
+            .ex27-gray-row {
+                flex-wrap: wrap;
+            }
+            .ex27-gray-col {
+                flex: 0 0 calc(50% - 5px);
+            }
+        }
     </style>
 </head>
 <body>
 
-
-<table style="width: 100%;">
-    <tr>
-        <th>Name</th>
-        <th>Student ID</th>
-    </tr>
-    <tr>
-        <th>鄭旭宸</th>
-        <th>113403028</th>
-    </tr>
-</table>
+<!-- ex27 -->
+<div style="background-color: #f1f1f1; padding: 15px; border: 1px solid #ccc; box-shadow: 0 0 10px rgba(0,0,0,0.05); margin: 30px 0;">
+    <p style="margin-top: 0; font-weight: bold;">Exercise 27</p>
+    <div class="ex27-container">
+        <div class="ex27-wrapper">
+            <!-- Header (Green) -->
+            <div class="ex27-box ex27-green"></div>
+            
+            <!-- Middle section (Cyan) -->
+            <div class="ex27-row ex27-cyan-row">
+                <div class="ex27-box ex27-cyan-col"></div>
+                <div class="ex27-box ex27-cyan-col"></div>
+                <div class="ex27-box ex27-cyan-col"></div>
+            </div>
+            
+            <!-- Bottom section (Gray) -->
+            <div class="ex27-row ex27-gray-row">
+                <div class="ex27-box ex27-gray-col"></div>
+                <div class="ex27-box ex27-gray-col"></div>
+                <div class="ex27-box ex27-gray-col"></div>
+                <div class="ex27-box ex27-gray-col"></div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div style="display: flex; gap: 20px; align-items: flex-start; margin: 30px 0;">
     <!-- 左半邊：ex26 -->
@@ -154,6 +219,17 @@
         }
     }
 </script>
+
+<table style="width: 100%;">
+    <tr>
+        <th>Name</th>
+        <th>Student ID</th>
+    </tr>
+    <tr>
+        <th>鄭旭宸</th>
+        <th>113403028</th>
+    </tr>
+</table>
 
 <div style="display: flex; gap: 20px; align-items: flex-start; margin: 30px 0;">
     <!-- 左半邊：ex21 -->
